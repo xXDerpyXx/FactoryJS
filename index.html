@@ -10,7 +10,7 @@
 	//ALL JS LIVES HERE
 	
 	
-	function makeGridPixel(size,x,y){
+	function makeGridPixel(size,x,y,grid){
 		grid[i][j]={};
 		var el = document.createElement("img");
 		el.id = "x"+x+"y"+y;
@@ -33,6 +33,7 @@
 		}(j,i);
 				
 		parent.appendChild(el);
+		return grid;
 	}
 	
 	
