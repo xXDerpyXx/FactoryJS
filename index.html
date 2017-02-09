@@ -5,3 +5,37 @@
 	
 	</div>
 </html>
+
+<script>
+	//ALL JS LIVES HERE
+	
+	
+	function makeGridPixel(size,x,y){
+		grid[i][j]={};
+		var el = document.createElement("img");
+		el.id = "x"+x+"y"+y;
+		el.style = "-moz-user-select: none;"
+		el.style.height = (size)+"px";
+		el.style.width = (size)+"px";
+		//el.style.backgroundColor = "#55ff55";
+		el.draggable = false;
+		el.src = "";
+		el.onmousedown = function (j,i){
+			return function(){
+				//gridClick.call(this,j,i);
+			}
+		}(j,i);
+		
+		el.onmouseover = function (j,i){
+			return function(){
+						//displayStats.call(this,j,i);
+			}
+		}(j,i);
+				
+		parent.appendChild(el);
+	}
+	
+	
+	
+	
+</script>
